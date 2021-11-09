@@ -5,6 +5,13 @@
 --text-accent: #2196F3;
 --background-color-dark: #2F303A;
 }
+p, ul, h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.container {
+    padding: 0 15px;
+} 
 body {
     font-family: 'Roboto', sans-serif;
 }

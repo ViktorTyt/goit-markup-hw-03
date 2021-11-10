@@ -10,7 +10,10 @@ p, ul, h1, h2, h3, h4 {
 }
 
 .container {
+    margin: 0 auto;
+    width: 1170px;
     padding: 0 15px;
+    outline: 2px solid tomato;
 } 
 body {
     font-family: 'Roboto', sans-serif;
@@ -68,13 +71,14 @@ body {
 /*---------------------------------------------------- main------------------------------------------ */
 /*--------------------section hero----------------------------- */
 .hero {
+    text-align: center;
     background-color:var(--background-color-dark);
 }
 .hero-title {
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:var(--second-title-text-color);
@@ -87,16 +91,18 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color:var(--second-title-text-color);
+    background-color:var(--text-accent);
+    color: var(--second-title-text-color);
     cursor: pointer;
 }
 .hero-btn:hover,
 .hero-btn:focus {
     color: var(--text-accent);
+    color: var(--second-title-text-color);
 }
 /*--------------------section features----------------------------- */
 .hidden {
-    display: none
+        display: none
 }
 .section-title {
     font-weight: 700;
@@ -106,7 +112,13 @@ body {
     letter-spacing: 0.03em;
     color: var(--main-title-color);  
 }
+.features-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: violet;
+}
 .features-title {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -119,24 +131,25 @@ body {
     color: var(--main-text-color);
 }
 /* -----------------------------section works---------------------- */
-.works-hidden {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--main-title-color);    
+.works-section {
+    padding-bottom: 94px;
+    background-color: yellow;
+}
+.works.section-title {
+    margin-bottom: 50px;
+}
+.works.list {
 }
 /* -----------------------------section team--------------------- */
-.team-hidden {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--main-title-color);
+.team.section-title {
+    padding-top: 94px;
+    margin-bottom: 50px;
+}
+.card-iamge {
+    margin-bottom: 30px;
 }
 .team-title {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;  
@@ -144,6 +157,7 @@ body {
     color: var(--main-title-color);
 }
 .team-text {
+    padding-bottom: 30px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--main-text-color);

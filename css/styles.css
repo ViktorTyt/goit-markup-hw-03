@@ -297,3 +297,15 @@ line-height: 1.87;
 letter-spacing: 0.03em;
 color: var(--main-text-color);
 }
+.portfolio-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.portfolio-filter {
+    display: flex;
+    padding-left: 295px;
+    padding-right: 295px;
+}
+.portfolio-filter-item:not(:last-child) {
+    margin-right: 8px;
+}

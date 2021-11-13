@@ -302,8 +302,13 @@ color: var(--main-text-color);
     padding-bottom: 94px;
 }
 .portfolio-filter {
+    padding-left: 0;
     display: flex;
+}
+.portfolio-filter-item:first-child {
     padding-left: 295px;
+}
+.portfolio-filter-item:last-child {
     padding-right: 295px;
 }
 .portfolio-filter-item:not(:last-child) {

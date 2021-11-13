@@ -5,21 +5,32 @@
 --text-accent: #2196F3;
 --background-color-dark: #2F303A;
 }
+
 p, ul, h1, h2, h3, h4 {
     margin: 0;
 }
 img {
     display: flex;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .container {
     margin: 0 auto;
     width: 1200px;
     padding: 0 15px;
-    outline: 2px solid tomato;
 } 
-body {
-    font-family: 'Roboto', sans-serif;
-}
+
+/* ----------------------------------------------------------------header--------------------- */
+
 .logo {
     margin-right: 93px;
     text-decoration: none;
@@ -50,6 +61,7 @@ body {
     align-items: center;
     padding-top: 24px;
     padding-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
 }
 .navigation {
     display: flex;
@@ -96,9 +108,13 @@ body {
 .adress-link-tel:focus {
     color:var(--text-accent)
 }
-/*---------------------------------------------------- main------------------------------------------ */
-/*--------------------section hero----------------------------- */
-.hero {
+
+/*---------------------------------------------------------- main------------------------------------- */
+
+/*--------------------------------------------------------section hero----------------------------- */
+
+
+.hero-section {
     text-align: center;
     background-color:var(--background-color-dark);
 }
@@ -113,10 +129,6 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:var(--second-title-text-color);
-    /* padding-top: 200px;
-    padding-left: 252px;
-    padding-right: 252px; */
-    margin-bottom: 30px;
 }
 .hero-btn {
     font-family: inherit;
@@ -137,12 +149,22 @@ body {
     color: var(--text-accent);
     color: var(--second-title-text-color);
 }
-/*--------------------section features----------------------------- */
-.features {
-    background-color: violet;
+
+/*----------------------------------------------------------section features----------------------------- */
+
+
+.features-list {
+    display: flex;
+    padding-left: 0;
+}
+.features-item {
+    width: 270px;
+}
+.features-item:not(:last-child) {
+    margin-right: 30px;
 }
 .hidden {
-        display: none
+    display: none
 }
 .section-title {
     font-weight: 700;
@@ -152,18 +174,6 @@ body {
     letter-spacing: 0.03em;
     color: var(--main-title-color);  
 }
-.features-container{
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-.features-list {
-    display: flex;
-    padding-left: 0;
-}
-.features-item:not(:last-child) {
-    margin-right: 30px;
-}
-
 .features-title {
     margin-bottom: 10px;
     font-weight: 700;
@@ -177,15 +187,13 @@ body {
     line-height: 1.71;
     color: var(--main-text-color);
 }
-/* -----------------------------section works---------------------- */
-.works-section {
-    background-color: yellow;
-}
-.works-container {
-    padding-bottom: 94px;
+
+/* ---------------------------------------------------------------section works---------------------- */
+.works-section.section {
+    padding-top: 0;
 }
 .section-title {
-    margin-bottom: 50px;
+        margin-bottom: 50px;
 }
 .works-list {
     display: flex;
@@ -194,14 +202,9 @@ body {
 .works-item:not(:last-child) {
     margin-right: 30px;
 }
-/* -----------------------------section team--------------------- */
-.team {
-    background-color: rgb(181, 223, 219);
-}
-.team-container {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+
+/* ----------------------------------------------------------------section team--------------------- */
+
 .section-title {
     margin-bottom: 50px;
 }
@@ -221,15 +224,19 @@ body {
     font-size: 16px;
     line-height: 1.19;  
     letter-spacing: 0.03em;
+    text-align: center;
     color: var(--main-title-color);
 }
 .team-text {
     padding-bottom: 30px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    text-align: center;
     color: var(--main-text-color);
 }
-/* -----------------------------footer---------------------- */
+
+/* ---------------------------------------------------------------footer---------------------- */
+
 .footer {
     background-color:var(--background-color-dark) ;
 }
@@ -266,7 +273,44 @@ body {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-/* ---------------------portfolio page---------------------------------------------- */
+
+
+/* ----------------------------------------------------------portfolio page---------------------------------------------- */
+
+
+.portfolio-filter {
+    padding-left: 295px;
+    padding-right: 295px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+.portfolio-filter-item:not(:last-child) {
+    margin-right: 8px;
+}
+.portfolio-filter-item {
+    border-radius: 4px;
+}
+.portfolio-list {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-item {
+    margin-right: 30px;
+}
+.portfolio-item:nth-child(3n) {
+    margin-right: 0px;
+}
+.portfolio-item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 30px;
+}
+.card-title {
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
 .portfolio-text-btn {
     font-family: inherit;
     font-weight: 500;
@@ -277,14 +321,8 @@ body {
     color:var(--main-title-color);
     cursor: pointer;
 }
-.portfolio-text-btn:hover,
-.portfolio-text-btn:focus,
-.portfolio-text-btn:hover,
-.portfolio-text-btn:focus {
-    background-color:var(--text-accent);
-    color:var(--second-title-text-color);
-}
 .portfolio-title {
+    text-align: center;
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
@@ -292,25 +330,16 @@ body {
     color: var(--main-title-color);
 }
 .portfolio-text {
-font-size: 16px;
-line-height: 1.87;
-letter-spacing: 0.03em;
-color: var(--main-text-color);
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
 }
-.portfolio-container {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-.portfolio-filter {
-    padding-left: 0;
-    display: flex;
-}
-.portfolio-filter-item:first-child {
-    padding-left: 295px;
-}
-.portfolio-filter-item:last-child {
-    padding-right: 295px;
-}
-.portfolio-filter-item:not(:last-child) {
-    margin-right: 8px;
+.portfolio-text-btn:hover,
+.portfolio-text-btn:focus,
+.portfolio-text-btn:hover,
+.portfolio-text-btn:focus {
+    background-color:var(--text-accent);
+    color:var(--second-title-text-color);
 }

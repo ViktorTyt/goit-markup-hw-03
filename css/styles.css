@@ -14,7 +14,10 @@ img {
     max-width: 100%;
     height: auto;
 }
-
+ul {
+    list-style: none;
+    padding: 0;
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -27,6 +30,7 @@ body {
     margin: 0 auto;
     width: 1200px;
     padding: 0 15px;
+    outline: 2px solid tomato;
 } 
 
 /* ----------------------------------------------------------------header--------------------- */
@@ -50,18 +54,17 @@ body {
 .navigation-link.current {
     color: var(--text-accent);
 }
-.list {
-    list-style-type: none;
-}
 .link {
     text-decoration: none;
+}
+.header {
+    border-bottom: 1px solid #ECECEC;
 }
 .header-container {
     display: flex;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #ECECEC;
 }
 .navigation {
     display: flex;
@@ -115,13 +118,14 @@ body {
 
 
 .hero-section {
+    padding: 200px 0;
     text-align: center;
     background-color:var(--background-color-dark);
 }
-.hero-container {
-    padding: 200px  252px;
-}
 .hero-title {
+    width: 696px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -143,6 +147,8 @@ body {
     cursor: pointer;
     min-width: 200px;
     height: 50px;
+    border: transparent;
+    border-radius: 4px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -157,22 +163,11 @@ body {
     display: flex;
     padding-left: 0;
 }
-.features-item {
-    width: 270px;
-}
 .features-item:not(:last-child) {
     margin-right: 30px;
 }
-.hidden {
-    display: none
-}
-.section-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--main-title-color);  
+.features-section-title {
+    display: none;
 }
 .features-title {
     margin-bottom: 10px;
@@ -184,16 +179,16 @@ body {
     color: var(--main-title-color);
     }
 .features-text {
+    letter-spacing: 0.03em;
     line-height: 1.71;
     color: var(--main-text-color);
 }
 
 /* ---------------------------------------------------------------section works---------------------- */
-.works-section.section {
-    padding-top: 0;
-}
+
 .section-title {
-        margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 .works-list {
     display: flex;
@@ -204,9 +199,8 @@ body {
 }
 
 /* ----------------------------------------------------------------section team--------------------- */
-
-.section-title {
-    margin-bottom: 50px;
+.team-section {
+    background-color: #F5F4FA;
 }
 .team-list {
     display: flex;
